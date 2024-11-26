@@ -1,8 +1,10 @@
 using System;
+using MediatR;
 
 namespace Application.Articles.CreateArticle;
 
-public class CreateArticleCommand
-{
+public sealed record CreateArticleCommand(
+    string Title,
+    string Content,
+    List<string> Tags):IRequest<Guid>;
 
-}

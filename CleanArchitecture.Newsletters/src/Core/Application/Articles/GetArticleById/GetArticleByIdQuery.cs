@@ -1,8 +1,7 @@
 using System;
+using MediatR;
 
 namespace Application.Articles.GetArticleById;
 
-public class GetArticleByIdQuery
-{
+public sealed record GetArticleByIdQuery(Guid Id) : IRequest<ArticleResponse?>;
 
-}

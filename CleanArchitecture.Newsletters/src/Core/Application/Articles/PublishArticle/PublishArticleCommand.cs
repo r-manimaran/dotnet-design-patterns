@@ -2,7 +2,5 @@ using System;
 
 namespace Application.Articles.PublishArticle;
 
-public class PublishArticleCommand
-{
+public sealed record PublishArticleCommand(Guid Id) : IRequest;
 
-}
