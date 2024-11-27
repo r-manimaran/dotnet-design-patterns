@@ -15,4 +15,5 @@ public class ArticleResponse
  public DateTime CreatedAt { get; set; } 
  
  public DateTime? PublishedAt { get; set; }
+ 
 }

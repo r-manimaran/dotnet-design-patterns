@@ -1,4 +1,7 @@
 using System;
+using Domain.Entities;
+using Domain.Repositories;
+using MediatR;
 
 namespace Application.Articles.CreateArticle;
 
