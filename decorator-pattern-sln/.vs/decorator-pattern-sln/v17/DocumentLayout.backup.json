@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8F0554D-59EB-4A47-A7D2-CDFA2A04FFE6}|Solution Items{E8F0554D-59EB-4A47-A7D2-CDFA2A04FFE6}|C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{E8F0554D-59EB-4A47-A7D2-CDFA2A04FFE6}|Solution Items{E8F0554D-59EB-4A47-A7D2-CDFA2A04FFE6}|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93DB5762-B4C4-4A9F-A116-CDD67C151DA4}|Weather-api\\Weather-api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\weather-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93DB5762-B4C4-4A9F-A116-CDD67C151DA4}|Weather-api\\Weather-api.csproj|solutionrelative:weather-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93DB5762-B4C4-4A9F-A116-CDD67C151DA4}|Weather-api\\Weather-api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\weather-api\\services\\cachedweatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93DB5762-B4C4-4A9F-A116-CDD67C151DA4}|Weather-api\\Weather-api.csproj|solutionrelative:weather-api\\services\\cachedweatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93DB5762-B4C4-4A9F-A116-CDD67C151DA4}|Weather-api\\Weather-api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\weather-api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93DB5762-B4C4-4A9F-A116-CDD67C151DA4}|Weather-api\\Weather-api.csproj|solutionrelative:weather-api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93DB5762-B4C4-4A9F-A116-CDD67C151DA4}|Weather-api\\Weather-api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\weather-api\\services\\iweatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93DB5762-B4C4-4A9F-A116-CDD67C151DA4}|Weather-api\\Weather-api.csproj|solutionrelative:weather-api\\services\\iweatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93DB5762-B4C4-4A9F-A116-CDD67C151DA4}|Weather-api\\Weather-api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\weather-api\\services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93DB5762-B4C4-4A9F-A116-CDD67C151DA4}|Weather-api\\Weather-api.csproj|solutionrelative:weather-api\\services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-11-28T21:18:56.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CachedWeatherService.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\Weather-api\\Services\\CachedWeatherService.cs",
+              "RelativeDocumentMoniker": "Weather-api\\Services\\CachedWeatherService.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\Weather-api\\Services\\CachedWeatherService.cs",
+              "RelativeToolTip": "Weather-api\\Services\\CachedWeatherService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T20:14:00.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\Weather-api\\Program.cs",
+              "RelativeDocumentMoniker": "Weather-api\\Program.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\Weather-api\\Program.cs",
+              "RelativeToolTip": "Weather-api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T20:11:47.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\Weather-api\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Weather-api\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\Weather-api\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Weather-api\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T20:08:27.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IWeatherService.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\Weather-api\\Services\\IWeatherService.cs",
+              "RelativeDocumentMoniker": "Weather-api\\Services\\IWeatherService.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\Weather-api\\Services\\IWeatherService.cs",
+              "RelativeToolTip": "Weather-api\\Services\\IWeatherService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T20:07:39.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeatherService.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\Weather-api\\Services\\WeatherService.cs",
+              "RelativeDocumentMoniker": "Weather-api\\Services\\WeatherService.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\decorator-pattern-sln\\Weather-api\\Services\\WeatherService.cs",
+              "RelativeToolTip": "Weather-api\\Services\\WeatherService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T20:07:12.42Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
