@@ -1,0 +1,37 @@
+<Project>
+  <PropertyGroup>
+	<TargetFramework>net9.0</TargetFramework>
+	<Nullable>enable</Nullable>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+	<PackageVersion Include="Aspire.Hosting.PostgreSQL" Version="9.0.0" />
+	<PackageVersion Include="Aspire.Hosting.RabbitMQ" Version="9.0.0" />
+	<PackageVersion Include="Aspire.Npgsql" Version="9.0.0" />
+	<PackageVersion Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0" />
+	<PackageVersion Include="Aspire.RabbitMQ.Client" Version="9.0.0" />
+	<PackageVersion Include="FluentEmail.Core" Version="3.0.2" />
+	<PackageVersion Include="FluentEmail.Smtp" Version="3.0.2" />
+	<PackageVersion Include="MassTransit" Version="8.3.4" />
+	<PackageVersion Include="MassTransit.EntityFrameworkCore" Version="8.3.4" />
+	<PackageVersion Include="MassTransit.Extensions.DependencyInjection" Version="7.3.1" />
+	<PackageVersion Include="MassTransit.RabbitMQ" Version="8.3.4" />
+	<PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+	<PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1" />
+	<PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.1" />
+	<PackageVersion Include="Npgsql" Version="9.0.2" />
+	<PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.3" />
+	<PackageVersion Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+	
+   <!-- Aspire Packages -->
+  <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="9.0.0" />
+  <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="9.0.0" />
+  <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.9.0" />
+  <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.9.0" />
+  <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.9.0" />
+  <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.9.0" />
+  <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.9.0" />
+  <PackageVersion Include="Aspire.Hosting.AppHost" Version="9.0.0" />
+  </ItemGroup>
+</Project>

@@ -1,5 +1,5 @@
 -- Create Orders table if not exists
-CREATE TABLE IF NOT EXISTS orders (
+CREATE TABLE IF NOT EXISTS orders(
   id UUID Primary KEY,
   customer_name VARCHAR(255) NOT NULL,
   product_name VARCHAR(255) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS orders (
   );
 
 -- Create Outbox table if it does not exists
-CREATE TABLE IF NOT EXISTS outbox_message (
+CREATE TABLE IF NOT EXISTS outbox_message(
 	id UUID PRIMARY KEY,
 	type VARCHAR(255) NOT NULL,
 	content_JSONB NOT NULL,

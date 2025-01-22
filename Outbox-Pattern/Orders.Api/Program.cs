@@ -1,41 +1,92 @@
+using Dapper;
+using MassTransit;
+using Messaging.Contracts;
+using Npgsql;
+using Orders.Api;
+using Orders.Api.Orders;
+using Orders.Api.Outbox;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<InitializeDatabase>();
+
+builder.Services.AddSingleton(_ =>
+{
+    return new NpgsqlDataSourceBuilder(builder.Configuration.GetConnectionString("Database")).Build();
+});
+
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host(builder.Configuration.GetConnectionString("Queue"));
+        cfg.ConfigureEndpoints(context);
+    });
+});
+
+DefaultTypeMap.MatchNamesWithUnderscores = true;
+
+builder.Services.AddHostedService<OutboxBackgroundService>();
+builder.Services.AddScoped<OutboxProcessor>();
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+await app.Services.GetRequiredService<InitializeDatabase>().Execute();
+
+
 if (app.Environment.IsDevelopment())
 {
+    app.UseSwagger();
+    app.UseSwaggerUI();
+
     app.MapOpenApi();
 }
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
+app.MapPost("orders", async (CreateOrderDto orderDto, NpgsqlDataSource dataSource) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+    var order = new Order
+    {
+        Id = Guid.NewGuid(),
+        CustomerName = orderDto.CustomerName,
+        ProductName = orderDto.ProductName,
+        Quantity = orderDto.Quantity,
+        TotalPrice = orderDto.TotalPrice,
+        OrderDate = DateTime.UtcNow
+    };
 
-app.MapGet("/weatherforecast", () =>
+    const string sql = """
+    INSERT INTO orders (id,customer_name, product_name, quantity, total_price,order_date)
+    VALUES (@Id, @CustomerName, @ProductName, @Quantity, @TotalPrice, @OrderDate);
+    """;
+
+    using var connection = await dataSource.OpenConnectionAsync();
+    using var transaction = await connection.BeginTransactionAsync();
+
+    await connection.ExecuteAsync(sql, order, transaction:transaction);
+
+    var orderCreatedEvent = new OrderCreatedIntegrationEvent(order.Id);
+
+    //await publishEndpoint.Publish(orderCreatedEvent);
+    await connection.InsertOutboxMessage(orderCreatedEvent, transaction);
+    
+    await transaction.CommitAsync();
+
+    return Results.Created($"orders/{order.Id}", order);
+
+});
+
+app.MapGet("orders/{id:guid}", async (Guid id, NpgsqlDataSource dataSource) =>
 {
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+    const string sql = "SELECT * FROM orders WHERE Id = @Id";
+
+});
 
 app.Run();
 
-internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+

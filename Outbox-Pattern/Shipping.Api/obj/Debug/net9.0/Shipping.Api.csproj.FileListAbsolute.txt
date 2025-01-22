@@ -6,8 +6,14 @@ C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin
 C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin\Debug\net9.0\Shipping.Api.runtimeconfig.json
 C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin\Debug\net9.0\Shipping.Api.dll
 C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin\Debug\net9.0\Shipping.Api.pdb
+C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin\Debug\net9.0\Dapper.dll
+C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin\Debug\net9.0\MassTransit.dll
+C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin\Debug\net9.0\MassTransit.Abstractions.dll
 C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin\Debug\net9.0\Npgsql.dll
+C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin\Debug\net9.0\Messaging.Contracts.dll
+C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\bin\Debug\net9.0\Messaging.Contracts.pdb
 C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\obj\Debug\net9.0\Shipping.Api.csproj.AssemblyReference.cache
 C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\obj\Debug\net9.0\Shipping.Api.GeneratedMSBuildEditorConfig.editorconfig
 C:\Maran\Study\Git\Dotnet\dotnet-design-patterns\Outbox-Pattern\Shipping.Api\obj\Debug\net9.0\Shipping.Api.AssemblyInfoInputs.cache

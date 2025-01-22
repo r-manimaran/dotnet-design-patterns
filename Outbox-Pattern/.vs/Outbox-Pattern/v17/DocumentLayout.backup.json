@@ -3,56 +3,44 @@
   "WorkspaceRootPath": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\orders.api\\create_database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\create_database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\shipping.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|solutionrelative:shipping.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\orders.api\\outbox\\outboxmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\outbox\\outboxmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\orders.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\shipping.api\\shipments\\ordercreatedintegrationeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|solutionrelative:shipping.api\\shipments\\ordercreatedintegrationeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\shipping.api\\shipments\\shipmentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|solutionrelative:shipping.api\\shipments\\shipmentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\orders.api\\orders\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\orders\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\shipping.api\\create_database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|solutionrelative:shipping.api\\create_database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\shipping.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|solutionrelative:shipping.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\shipping.api\\shipments\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|solutionrelative:shipping.api\\shipments\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\orders.api\\outbox\\outboxbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\outbox\\outboxbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\orders.api\\orders.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\orders.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\orders.api\\outbox\\outboxprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\outbox\\outboxprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\orders.api\\outbox\\outboxextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\outbox\\outboxextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\orders.api\\initializedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\initializedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\shipping.api\\initializedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|solutionrelative:shipping.api\\initializedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\orders.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47D027AF-4626-47C9-A3F1-26DEB3E22986}|Messaging.Contracts\\Messaging.Contracts.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\messaging.contracts\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47D027AF-4626-47C9-A3F1-26DEB3E22986}|Messaging.Contracts\\Messaging.Contracts.csproj|solutionrelative:messaging.contracts\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\shipping.api\\create_database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{26BE0A2C-3A14-4E07-9A2E-84B5B37791F1}|Shipping.Api\\Shipping.Api.csproj|solutionrelative:shipping.api\\create_database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\orders.api\\create_database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{2BE07AFD-0524-4E2D-B20E-1190931558CA}|Orders.Api\\Orders.Api.csproj|solutionrelative:orders.api\\create_database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{47D027AF-4626-47C9-A3F1-26DEB3E22986}|Messaging.Contracts\\Messaging.Contracts.csproj|c:\\maran\\study\\git\\dotnet\\dotnet-design-patterns\\outbox-pattern\\messaging.contracts\\assemblyreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D027AF-4626-47C9-A3F1-26DEB3E22986}|Messaging.Contracts\\Messaging.Contracts.csproj|solutionrelative:messaging.contracts\\assemblyreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -67,77 +55,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "create_database.sql ",
-              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\create_database.sql",
-              "RelativeDocumentMoniker": "Orders.Api\\create_database.sql",
-              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\create_database.sql",
-              "RelativeToolTip": "Orders.Api\\create_database.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-28T03:51:02.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OutboxMessage.cs",
-              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Outbox\\OutboxMessage.cs",
-              "RelativeDocumentMoniker": "Orders.Api\\Outbox\\OutboxMessage.cs",
-              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Outbox\\OutboxMessage.cs",
-              "RelativeToolTip": "Orders.Api\\Outbox\\OutboxMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T03:48:28.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Orders.Api",
-              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Orders.Api.csproj",
-              "RelativeDocumentMoniker": "Orders.Api\\Orders.Api.csproj",
-              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Orders.Api.csproj",
-              "RelativeToolTip": "Orders.Api\\Orders.Api.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-28T03:02:31.897Z",
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\Dockerfile",
+              "RelativeDocumentMoniker": "Shipping.Api\\Dockerfile",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\Dockerfile",
+              "RelativeToolTip": "Shipping.Api\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-30T01:01:42.574Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "create_database.sql ",
-              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\create_database.sql",
-              "RelativeDocumentMoniker": "Shipping.Api\\create_database.sql",
-              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\create_database.sql",
-              "RelativeToolTip": "Shipping.Api\\create_database.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-28T03:02:12.389Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Shipping.Api\\Program.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\Program.cs",
+              "RelativeToolTip": "Shipping.Api\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T20:48:46.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Shipment.cs",
-              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\Shipments\\Shipment.cs",
-              "RelativeDocumentMoniker": "Shipping.Api\\Shipments\\Shipment.cs",
-              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\Shipments\\Shipment.cs",
-              "RelativeToolTip": "Shipping.Api\\Shipments\\Shipment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Orders.Api\\Program.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Program.cs",
+              "RelativeToolTip": "Orders.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T02:59:25.409Z",
+              "WhenOpened": "2024-11-29T17:14:10.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ShipmentStatus.cs",
-              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\Shipments\\ShipmentStatus.cs",
-              "RelativeDocumentMoniker": "Shipping.Api\\Shipments\\ShipmentStatus.cs",
-              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\Shipments\\ShipmentStatus.cs",
-              "RelativeToolTip": "Shipping.Api\\Shipments\\ShipmentStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Orders\\Order.cs",
+              "RelativeDocumentMoniker": "Orders.Api\\Orders\\Order.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Orders\\Order.cs",
+              "RelativeToolTip": "Orders.Api\\Orders\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T02:59:05.662Z",
+              "WhenOpened": "2024-11-29T17:13:18.363Z",
               "EditorCaption": ""
             },
             {
@@ -148,61 +112,74 @@
               "RelativeDocumentMoniker": "Shipping.Api\\Shipments\\OrderCreatedIntegrationEventConsumer.cs",
               "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\Shipments\\OrderCreatedIntegrationEventConsumer.cs",
               "RelativeToolTip": "Shipping.Api\\Shipments\\OrderCreatedIntegrationEventConsumer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA+wAsAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T02:58:24.264Z",
+              "WhenOpened": "2024-11-29T17:01:45.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OutboxProcessor.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Outbox\\OutboxProcessor.cs",
+              "RelativeDocumentMoniker": "Orders.Api\\Outbox\\OutboxProcessor.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Outbox\\OutboxProcessor.cs",
+              "RelativeToolTip": "Orders.Api\\Outbox\\OutboxProcessor.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T03:50:08.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OutboxBackgroundService.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Outbox\\OutboxBackgroundService.cs",
+              "RelativeDocumentMoniker": "Orders.Api\\Outbox\\OutboxBackgroundService.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Outbox\\OutboxBackgroundService.cs",
+              "RelativeToolTip": "Orders.Api\\Outbox\\OutboxBackgroundService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwBYAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T03:30:18.456Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "InitializeDatabase.cs",
-              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\InitializeDatabase.cs",
-              "RelativeDocumentMoniker": "Orders.Api\\InitializeDatabase.cs",
-              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\InitializeDatabase.cs",
-              "RelativeToolTip": "Orders.Api\\InitializeDatabase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "OutboxExtensions.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Outbox\\OutboxExtensions.cs",
+              "RelativeDocumentMoniker": "Orders.Api\\Outbox\\OutboxExtensions.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Outbox\\OutboxExtensions.cs",
+              "RelativeToolTip": "Orders.Api\\Outbox\\OutboxExtensions.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T02:56:49.484Z",
+              "WhenOpened": "2024-11-29T03:15:16.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "InitializeDatabase.cs",
-              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\InitializeDatabase.cs",
-              "RelativeDocumentMoniker": "Shipping.Api\\InitializeDatabase.cs",
-              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Shipping.Api\\InitializeDatabase.cs",
-              "RelativeToolTip": "Shipping.Api\\InitializeDatabase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\InitializeDatabase.cs",
+              "RelativeDocumentMoniker": "Orders.Api\\InitializeDatabase.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\InitializeDatabase.cs",
+              "RelativeToolTip": "Orders.Api\\InitializeDatabase.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAwwEYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T02:56:29.898Z",
+              "WhenOpened": "2024-11-29T02:20:22.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Dockerfile",
-              "RelativeDocumentMoniker": "Orders.Api\\Dockerfile",
-              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Orders.Api\\Dockerfile",
-              "RelativeToolTip": "Orders.Api\\Dockerfile",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-27T23:03:21.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Messaging.Contracts\\Class1.cs",
-              "RelativeDocumentMoniker": "Messaging.Contracts\\Class1.cs",
-              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Messaging.Contracts\\Class1.cs",
-              "RelativeToolTip": "Messaging.Contracts\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Title": "AssemblyReference.cs",
+              "DocumentMoniker": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Messaging.Contracts\\AssemblyReference.cs",
+              "RelativeDocumentMoniker": "Messaging.Contracts\\AssemblyReference.cs",
+              "ToolTip": "C:\\Maran\\Study\\Git\\Dotnet\\dotnet-design-patterns\\Outbox-Pattern\\Messaging.Contracts\\AssemblyReference.cs",
+              "RelativeToolTip": "Messaging.Contracts\\AssemblyReference.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T23:02:06.11Z",
+              "WhenOpened": "2024-11-29T16:58:07.314Z",
               "EditorCaption": ""
             }
           ]
