@@ -42,6 +42,8 @@ public static class AppExtension
                     h.Password("guest");
                 });
 
+                //cfg.UseOpenTelemetry();
+
                 cfg.UseInMemoryOutbox(context);
 
                 cfg.ConfigureEndpoints(context);

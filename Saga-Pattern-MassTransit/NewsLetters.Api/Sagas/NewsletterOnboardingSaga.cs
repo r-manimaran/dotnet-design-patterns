@@ -10,9 +10,21 @@ public class NewsletterOnboardingSaga : MassTransitStateMachine<NewsletterOnboar
     public State FollowingUp { get; set; }
     public State Onboarding { get; set; }
 
-    public Event<SubscriberCreated> SubscriberCreated { get; set; }
-    public Event<WelcomeEmailSent> WelcomeEmailSent { get; set; }
-    public Event<FollowUpEmailSent> FollowUpEmailSent { get; set; }
+    // Failure States
+    public State WelcomingFailed { get; set; }
+    public State FollowingUpFailed { get; set; }
+    public State Faulted {get;set;}
+
+
+    // Events
+    public Event<SubscriberCreated> SubscriberCreated { get; private set; } = null!;
+    public Event<WelcomeEmailSent> WelcomeEmailSent { get; private set; } = null!;
+    public Event<FollowUpEmailSent> FollowUpEmailSent { get; private set; } = null!;
+
+    // Failure Events
+    public Event<WelcomeEmailFailed> WelcomeEmailFailed { get; private set; } = null!;
+    public Event<FollowUpEmailFailed> FollowUpEmailFailed { get; private set; } = null!;
+    public Event<OnboardingFailed> OnboardingFailed { get; private set; } = null!;
 
     public NewsletterOnboardingSaga()
     {
@@ -29,6 +41,22 @@ public class NewsletterOnboardingSaga : MassTransitStateMachine<NewsletterOnboar
         });
 
         Event(() => FollowUpEmailSent, x =>
+        {
+            x.CorrelateById(context => context.Message.SubscriberId);
+        });
+
+        // Define Failure Events
+        Event(() => WelcomeEmailFailed, x =>
+        {
+            x.CorrelateById(context => context.Message.SubscriberId);
+        });
+
+        Event(() => FollowUpEmailFailed, x =>
+        {
+            x.CorrelateById(context => context.Message.SubscriberId);
+        });
+
+        Event(() => OnboardingFailed, x =>
         {
             x.CorrelateById(context => context.Message.SubscriberId);
         });
@@ -60,10 +88,32 @@ public class NewsletterOnboardingSaga : MassTransitStateMachine<NewsletterOnboar
                     activity?.SetTag("CorrelationId", context.Saga.CorrelationId);
                     activity?.SetTag("Status", "Email Sent");
 
-                    context.Saga.WelcomeEmailSent = true;
+                    context.Saga.WelcomeEmailSent = false;
                 })
             .TransitionTo(FollowingUp)
-            .Publish(context => new SendFollowUpEmail(context.Message.SubscriberId, context.Message.Email)));
+            .Publish(context => new SendFollowUpEmail(context.Message.SubscriberId, context.Message.Email)),
+          When(WelcomeEmailFailed)
+            .Then(context =>
+            {
+                using var activity = Activity.Current?.Source.StartActivity(
+                    "Process Welcome Email Failed",
+                    ActivityKind.Consumer);
+                activity?.SetTag("CorrelationId", context.Saga.CorrelationId);
+                activity?.SetTag("Status", "Email Failed");
+
+                context.Saga.WelcomeEmailSent = false;
+                context.Saga.IsCompensating = true;
+                context.Saga.LastErrorMessages = context.Message.ErrorMessage;
+                context.Saga.LastFailureTime = DateTime.UtcNow;
+                context.Saga.RetryCount++;
+            })
+            .TransitionTo(WelcomingFailed)
+            .Publish(context => new OnboardingFailed
+            {
+                SubscriberId = context.Message.SubscriberId,
+                Email = context.Message.Email
+            })
+            .Finalize());
 
         During(FollowingUp,
             When(FollowUpEmailSent)
@@ -83,8 +133,43 @@ public class NewsletterOnboardingSaga : MassTransitStateMachine<NewsletterOnboar
 
                 SubscriberId = context.Message.SubscriberId,
                 Email = context.Message.Email
+            }),
+            When(FollowUpEmailFailed)
+            .Then(context =>
+            {
+                using var activity = Activity.Current?.Source.StartActivity(
+                    "Process Follow Up Email Failed",
+                    ActivityKind.Consumer);
+                activity?.SetTag("CorrelationId", context.Saga.CorrelationId);
+                activity?.SetTag("Status", "Followup Email Failed");
+
+                context.Saga.FollowUpEmailSent = false;
+            })
+            .TransitionTo(FollowingUpFailed)
+            .Publish(context => new OnboardingFailed
+            {
+                SubscriberId = context.Message.SubscriberId,
+                Email = context.Message.Email
             })
             .Finalize());
+        
+        DuringAny(
+            When(OnboardingFailed)
+            .Then(context =>
+            {
+                using var activity = Activity.Current?.Source.StartActivity(
+                    "Process Onboarding Failed",
+                    ActivityKind.Consumer);
+                activity?.SetTag("CorrelationId", context.Saga.CorrelationId);
+                activity?.SetTag("Status", "Onboarding Failed");
+
+                context.Saga.OnboardingCompleted = false;
+                context.Saga.LastErrorMessages = context.Message.ErrorMessage;
+                context.Saga.IsCompensating  = true;
+            })
+            .TransitionTo(Faulted));
+
+            SetCompletedWhenFinalized();
 
     }
 }

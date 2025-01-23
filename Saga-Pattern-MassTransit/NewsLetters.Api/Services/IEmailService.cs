@@ -2,6 +2,6 @@
 
 public interface IEmailService
 {
-    Task SendWelcomeEmailAsync(string email);
+    Task<bool> SendWelcomeEmailAsync(string email);
     Task SendFollowUpEmailAsync(string email);
 }

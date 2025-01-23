@@ -41,14 +41,23 @@ public class EmailService : IEmailService
         _logger.LogInformation($"Send follow-up email to {email} successfully");
     }
 
-    public async Task SendWelcomeEmailAsync(string email)
+    public async Task<bool> SendWelcomeEmailAsync(string email)
     {
         _logger.LogInformation($"Sending welcome email to {email}");
-
-        var response = await _fluentEmail.To(email)
-        .Subject("Welcome email")
-        .Body("This is a Welcome email", isHtml: true)
-        .SendAsync();
-        _logger.LogInformation($"Send Welcome email to {email} successfully");
+        try
+        {
+            var response = await _fluentEmail.To(email)
+                .Subject("Welcome email")
+                .Body("This is a Welcome email", isHtml: true)
+                .SendAsync();
+            _logger.LogInformation($"Send Welcome email to {email} successfully");
+            return true;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"Error sending welcome email to {email}");
+            return false;
+        }    
+       
     }
 }

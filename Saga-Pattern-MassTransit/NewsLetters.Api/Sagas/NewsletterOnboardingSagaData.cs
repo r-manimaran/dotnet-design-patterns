@@ -12,4 +12,10 @@ public class NewsletterOnboardingSagaData : SagaStateMachineInstance
     public bool WelcomeEmailSent { get; set; }
     public bool FollowUpEmailSent { get; set; }
     public bool OnboardingCompleted { get; set; }
+
+    // Failure Tracking
+    public int RetryCount { get; set; } 
+    public string LastErrorMessages { get; set; } = string.Empty;
+    public DateTime? LastFailureTime { get; set; }
+    public bool IsCompensating { get; set; }    
 }
