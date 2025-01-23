@@ -25,7 +25,7 @@ jobs:
               working-directory: Saga-Pattern-MassTransit
               run: dotnet restore
 
-            - name: Checking NuGet package vulnerabilities
+            - name: Checking NuGet package vulnerabilities in proj
               working-directory: Saga-Pattern-MassTransit
               run: |
                 dotnet list package --vulnerable --include-transitive 2>&1 | tee build.log
