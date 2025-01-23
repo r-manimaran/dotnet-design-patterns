@@ -1,0 +1,36 @@
+name: dotnet build pipeline to Check the vulnerable pacakges and report
+
+on:
+    push:
+        branches:
+            [ main ]
+        paths:
+            - 'Saga-Pattern-MassTransit'
+    workflow_dispatch:
+
+jobs:
+    build-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout to the branch
+              uses: actions/checkout@v2
+            
+            - name: Setup .Net
+              uses: actions/setup-dotnet@v3
+              with:
+                dotnet-version: '9.0'
+            
+            - name: Restore Dependencies
+              working-directory: Saga-Pattern-MassTransit
+              run: dotnet restore
+
+            - name: Checking NuGet vulnerabilities
+              run: |
+                dotnet list package --vulnerable --include-transitive 2>&1 | tee build.log
+                echo "Analyze dotnet list package command log output"
+                grep -q -i "critical\|high\|moderate\|low" build.log; [$? -eq 0] && echo "Security vulnerabilities found on the log output" && exit 1
+            
+            - name: Build the solution
+              working-directory: Saga-Pattern-MassTransit
+              run: dotnet build --no-restore -c Release
