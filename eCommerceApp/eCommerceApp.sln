@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerceApp.Domain", "eCom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerceApp.Infrastructure", "eCommerceApp.Infrastructure\eCommerceApp.Infrastructure.csproj", "{C870CDED-447F-425A-A5D9-A6B163C2624A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerceApp.AppHost", "eCommerceApp.AppHost\eCommerceApp.AppHost.csproj", "{7D4FC647-E3BB-436D-8373-35C53BC4514F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerceApp.ServiceDefaults", "eCommerceApp.ServiceDefaults\eCommerceApp.ServiceDefaults.csproj", "{C0FA6F8A-71F4-4FD2-991E-C56AB75B1937}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "aspire", "aspire", "{DAA91B54-8D7A-4729-B64C-25325B5DB377}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +39,20 @@ Global
 		{C870CDED-447F-425A-A5D9-A6B163C2624A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C870CDED-447F-425A-A5D9-A6B163C2624A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C870CDED-447F-425A-A5D9-A6B163C2624A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D4FC647-E3BB-436D-8373-35C53BC4514F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D4FC647-E3BB-436D-8373-35C53BC4514F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D4FC647-E3BB-436D-8373-35C53BC4514F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D4FC647-E3BB-436D-8373-35C53BC4514F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0FA6F8A-71F4-4FD2-991E-C56AB75B1937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0FA6F8A-71F4-4FD2-991E-C56AB75B1937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0FA6F8A-71F4-4FD2-991E-C56AB75B1937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0FA6F8A-71F4-4FD2-991E-C56AB75B1937}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D4FC647-E3BB-436D-8373-35C53BC4514F} = {DAA91B54-8D7A-4729-B64C-25325B5DB377}
+		{C0FA6F8A-71F4-4FD2-991E-C56AB75B1937} = {DAA91B54-8D7A-4729-B64C-25325B5DB377}
 	EndGlobalSection
 EndGlobal
