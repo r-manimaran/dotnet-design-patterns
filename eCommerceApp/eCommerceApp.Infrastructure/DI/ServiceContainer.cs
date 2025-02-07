@@ -12,7 +12,7 @@ public static class ServiceContainer
 {
     public static IServiceCollection AddInfrastructureService(this IServiceCollection services, IConfiguration configuration)
     {
-        string connectionString = configuration.GetConnectionString("Default")!;
+        string connectionString = configuration.GetConnectionString("eCommerce")!;
         services.AddDbContext<AppDbContext>(option =>
             option.UseSqlServer(connectionString,
             sqlOptions =>
@@ -27,4 +27,6 @@ public static class ServiceContainer
         
         return services;
     }
+
+    
 }

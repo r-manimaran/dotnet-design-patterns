@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -18,11 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\eCommerceApp.Application\eCommerceApp.Application.csproj" />
+    <ProjectReference Include="..\eCommerceApp.Infrastructure\eCommerceApp.Infrastructure.csproj" />
     <ProjectReference Include="..\eCommerceApp.ServiceDefaults\eCommerceApp.ServiceDefaults.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Endpoints\" />
   </ItemGroup>
 
 </Project>

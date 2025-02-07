@@ -24,7 +24,8 @@ public class GenericRepository<TEntity>(AppDbContext context) : IGenericReposito
         var entity = await context.Set<TEntity>().FindAsync(id);
         if (entity == null)
         {
-            throw new ItemNotFoundException($"{typeof(TEntity).Name} with Id {id} not found");          
+            return false;
+            //throw new ItemNotFoundException($"{typeof(TEntity).Name} with Id {id} not found");          
         }
         context.Set<TEntity>().Remove(entity);
         return await context.SaveChangesAsync() > 0;
@@ -39,10 +40,7 @@ public class GenericRepository<TEntity>(AppDbContext context) : IGenericReposito
     public async Task<TEntity> GetByIdAsync(Guid id)
     {
        var result = await context.Set<TEntity>().FindAsync(id);
-       if (result == null)
-       {
-           throw new ItemNotFoundException($"{typeof(TEntity).Name} with Id {id} not found");
-       }
+     
        return result;
     }
 
