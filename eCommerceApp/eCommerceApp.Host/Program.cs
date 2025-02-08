@@ -3,8 +3,18 @@ using eCommerceApp.Host.Endpoints;
 using eCommerceApp.Host.Extensions;
 using eCommerceApp.Infrastructure.DI;
 using Scalar.AspNetCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Log.Logger = new LoggerConfiguration()
+            .Enrich.FromLogContext()
+            .WriteTo.Console()
+            .WriteTo.File("log/log.txt", rollingInterval: RollingInterval.Day)
+            .CreateLogger();
+
+builder.Host.UseSerilog();
+Log.Logger.Information("Application is building...");
 
 builder.AddServiceDefaults();
 
@@ -13,37 +23,53 @@ builder.Services.AddApplicationService();
 builder.Services.AddInfrastructureService(builder.Configuration);
 
 builder.Services.AddOpenApi();
-
-var app = builder.Build();
-
-app.MapDefaultEndpoints();
-
-if (app.Environment.IsDevelopment())
+try
 {
-    app.MapOpenApi();
+    var app = builder.Build();
 
-    app.UseSwaggerUI(options => {
-        options.SwaggerEndpoint(
-        "/openapi/v1.json", "OpenAPI v1");
-    });
+    // use serilog
+    app.UseSerilogRequestLogging();
 
-    app.UseReDoc(options => {
-        options.SpecUrl("/openapi/v1.json");
-    });
+    app.MapDefaultEndpoints();
 
-    app.MapScalarApiReference();
+    if (app.Environment.IsDevelopment())
+    {
+        app.MapOpenApi();
 
-    app.ApplyMigration();
+        app.UseSwaggerUI(options =>
+        {
+            options.SwaggerEndpoint(
+            "/openapi/v1.json", "OpenAPI v1");
+        });
+
+        app.UseReDoc(options =>
+        {
+            options.SpecUrl("/openapi/v1.json");
+        });
+
+        app.MapScalarApiReference();
+
+        app.ApplyMigration();
+    }
+
+    app.UserInfrastructureService();
+
+    app.UseHttpsRedirection();
+
+    ProductEndpoints.MapProductEndpoints(app);
+
+    CategoryEndpoints.MapCategoryEndpoints(app);
+
+    Log.Logger.Information("Application is running...");
+
+    app.Run();
 }
-
-app.UserInfrastructureService();
-
-app.UseHttpsRedirection();
-
-ProductEndpoints.MapProductEndpoints(app);
-
-CategoryEndpoints.MapCategoryEndpoints(app);
-
-app.Run();
-
+catch(Exception ex)
+{
+    Log.Logger.Error(ex,"Application failed to Start");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
 

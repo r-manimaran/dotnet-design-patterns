@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using EntityFramework.Exceptions.SqlServer;
 using Microsoft.AspNetCore.Builder;
 using eCommerceApp.Infrastructure.Middlewares;
+using eCommerceApp.Application.Services.Interfaces.Logging;
 
 namespace eCommerceApp.Infrastructure.DI;
 
@@ -27,6 +28,7 @@ public static class ServiceContainer
 
         services.AddScoped<IGenericRepository<Product>, GenericRepository<Product>>();
         services.AddScoped<IGenericRepository<Category>, GenericRepository<Category>>();
+        services.AddScoped(typeof(IAppLogger<>), typeof(SerilogLoggerAdaptor<>));
         
         return services;
     }
