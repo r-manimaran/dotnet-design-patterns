@@ -9,6 +9,13 @@ using EntityFramework.Exceptions.SqlServer;
 using Microsoft.AspNetCore.Builder;
 using eCommerceApp.Infrastructure.Middlewares;
 using eCommerceApp.Application.Services.Interfaces.Logging;
+using eCommerceApp.Domain.Entities.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using eCommerceApp.Domain.Interfaces.Authentication;
+using eCommerceApp.Infrastructure.Repositories.Authentication;
 
 namespace eCommerceApp.Infrastructure.DI;
 
@@ -30,6 +37,48 @@ public static class ServiceContainer
         services.AddScoped<IGenericRepository<Category>, GenericRepository<Category>>();
         services.AddScoped(typeof(IAppLogger<>), typeof(SerilogLoggerAdaptor<>));
         
+        services.AddDefaultIdentity<AppUser>(options =>
+        {
+            options.SignIn.RequireConfirmedEmail = true;
+            options.Tokens.EmailConfirmationTokenProvider = TokenOptions.DefaultEmailProvider;
+            options.Password.RequireDigit = true;
+            options.Password.RequireNonAlphanumeric = true;
+            options.Password.RequiredLength = 8;
+            options.Password.RequireLowercase = true;
+            options.Password.RequireUppercase = true;
+            options.Password.RequiredUniqueChars = 1;
+        })
+         .AddRoles<IdentityRole>()
+         .AddEntityFrameworkStores<AppDbContext>();
+
+        services.AddAuthentication(options =>
+        {
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        })
+        .AddJwtBearer(options =>
+        {
+            options.SaveToken = true;
+            options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+            {
+                ValidateAudience = true,
+                ValidateIssuer = true,
+                ValidateLifetime = true,
+                RequireExpirationTime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = configuration["JWT:Issuer"],
+                ValidAudience = configuration["JWT:Audience"],
+                ClockSkew = TimeSpan.Zero,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Key"]!))
+
+            };
+        });
+
+        services.AddScoped<IUserManagement, UserManagement>();
+        services.AddScoped<ITokenManagement, TokenManagement>();
+        services.AddScoped<IRoleManagement, RoleManagement>();
+
         return services;
     }
 

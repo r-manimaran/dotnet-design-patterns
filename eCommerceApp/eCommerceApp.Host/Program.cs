@@ -14,6 +14,7 @@ Log.Logger = new LoggerConfiguration()
             .CreateLogger();
 
 builder.Host.UseSerilog();
+
 Log.Logger.Information("Application is building...");
 
 builder.AddServiceDefaults();
@@ -30,11 +31,13 @@ builder.Services.AddCors(builder =>
     {
         options.AllowAnyHeader()
                .AllowAnyMethod()
-               .AllowAnyOrigin()
+               .WithOrigins("https://localhost:7825")
                .AllowCredentials();
 
     });
 });
+
+
 try
 {
     var app = builder.Build();
@@ -74,9 +77,15 @@ try
 
     CategoryEndpoints.MapCategoryEndpoints(app);
 
+    AuthenticationEndpoints.MapAuthenticationEndpoints(app);
+
     Log.Logger.Information("Application is running...");
 
     app.Run();
+}
+catch(InvalidOperationException ex)
+{
+    Log.Logger.Error(ex, "Service Configuration error");
 }
 catch(Exception ex)
 {

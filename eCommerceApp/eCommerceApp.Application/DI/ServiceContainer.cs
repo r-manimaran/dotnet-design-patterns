@@ -1,5 +1,11 @@
 ﻿using eCommerceApp.Application.Services.Implementations;
+using eCommerceApp.Application.Services.Implementations.Authentication;
 using eCommerceApp.Application.Services.Interfaces;
+using eCommerceApp.Application.Services.Interfaces.Authentication;
+using eCommerceApp.Application.Validations;
+using eCommerceApp.Application.Validations.Authentication;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -17,6 +23,12 @@ public static class ServiceContainer
 
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<ICategoryService, CategoryService>();
+
+        services.AddFluentValidationAutoValidation();
+        services.AddValidatorsFromAssemblyContaining<CreateUserRequestValidator>();
+        services.AddScoped<IValidationService, ValidationService>();
+
+        services.AddScoped<IAuthenticationService, AuthenticationService>();
 
         return services;
     }

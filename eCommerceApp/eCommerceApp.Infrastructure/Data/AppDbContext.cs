@@ -1,22 +1,48 @@
 ﻿using eCommerceApp.Domain.Entities;
+using eCommerceApp.Domain.Entities.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace eCommerceApp.Infrastructure.Data;
 
-public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+public class AppDbContext : IdentityDbContext<AppUser>
 {
+    public AppDbContext(DbContextOptions options) :base(options)
+    {
+        
+    }
     public DbSet<Product> Products { get; set; }
     public DbSet<Category> Categories { get;set; }
+    public DbSet<RefreshToken> RefreshTokens { get; set; }
+
+  
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // base implementatin to setup Identity tables
+        base.OnModelCreating(modelBuilder);
+
+        // custom Configurations
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+
+        // Add the seed data to Add the User Roles
+        modelBuilder.Entity<IdentityRole>()
+            .HasData(
+                        new IdentityRole
+                        {
+                            Id = "de1d0916-a989-474a-a876-236525ba9f47",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                         new IdentityRole
+                         {
+                             Id ="d412f56e-9f7f-47d8-a540-2c407940ec44",
+                             Name = "User",
+                             NormalizedName = "USER"
+                         }
+                    );
+
     }   
 }
 
