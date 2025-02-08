@@ -36,6 +36,8 @@ if (app.Environment.IsDevelopment())
     app.ApplyMigration();
 }
 
+app.UserInfrastructureService();
+
 app.UseHttpsRedirection();
 
 ProductEndpoints.MapProductEndpoints(app);
