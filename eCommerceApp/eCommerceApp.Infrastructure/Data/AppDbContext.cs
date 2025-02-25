@@ -1,5 +1,7 @@
 ﻿using eCommerceApp.Domain.Entities;
+using eCommerceApp.Domain.Entities.Cart;
 using eCommerceApp.Domain.Entities.Identity;
+using eCommerceApp.Domain.Interfaces.Cart;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -15,9 +17,9 @@ public class AppDbContext : IdentityDbContext<AppUser>
     public DbSet<Product> Products { get; set; }
     public DbSet<Category> Categories { get;set; }
     public DbSet<RefreshToken> RefreshTokens { get; set; }
+    public DbSet<PaymentMethod> PaymentMethods { get; set; }
 
-  
-
+    public DbSet<Archive> CheckoutArchives { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // base implementatin to setup Identity tables
@@ -42,6 +44,13 @@ public class AppDbContext : IdentityDbContext<AppUser>
                              NormalizedName = "USER"
                          }
                     );
+
+        modelBuilder.Entity<PaymentMethod>().HasData(
+            new PaymentMethod
+            {
+                Id = Guid.Parse("d412f57e-9f7f-47d8-a640-2c407940ec44"),
+                Name = "Credit Card"
+            });
 
     }   
 }

@@ -79,6 +79,8 @@ try
 
     AuthenticationEndpoints.MapAuthenticationEndpoints(app);
 
+    PaymentMethodEndpoints.MapPaymentMethodEndpoints(app);
+
     Log.Logger.Information("Application is running...");
 
     app.Run();

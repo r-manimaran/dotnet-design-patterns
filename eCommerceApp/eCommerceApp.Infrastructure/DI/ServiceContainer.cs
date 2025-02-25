@@ -16,6 +16,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using eCommerceApp.Domain.Interfaces.Authentication;
 using eCommerceApp.Infrastructure.Repositories.Authentication;
+using eCommerceApp.Domain.Interfaces.Cart;
+using eCommerceApp.Infrastructure.Repositories.Cart;
+using eCommerceApp.Application.Services.Interfaces.Cart;
 
 namespace eCommerceApp.Infrastructure.DI;
 
@@ -78,6 +81,8 @@ public static class ServiceContainer
         services.AddScoped<IUserManagement, UserManagement>();
         services.AddScoped<ITokenManagement, TokenManagement>();
         services.AddScoped<IRoleManagement, RoleManagement>();
+        services.AddScoped<IPaymentMethod, PaymentMethodRepository>();
+        services.AddScoped<IPaymentService, StripePaymentService>();
 
         return services;
     }
