@@ -13,4 +13,9 @@ public interface IUnitOfWork :IDisposable
     void SaveChanges();
 
     Task SaveChangesAsync();
+
+    void BeginTransaction();
+
+    void CommitTransaction();
+    void RollbackTransaction();
 }
