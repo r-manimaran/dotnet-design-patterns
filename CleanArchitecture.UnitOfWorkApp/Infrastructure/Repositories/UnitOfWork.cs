@@ -3,6 +3,7 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +12,9 @@ namespace Infrastructure.Repositories;
 
 public class UnitOfWork : IUnitOfWork
 {
-    private readonly Dictionary<Type, object> customRepositoryList;
-    
+     private readonly Dictionary<Type, object> customRepositoryList;
+     private  IDbContextTransaction _transaction;
+
      private bool _disposed;
      private readonly AppDbContext context;
      public UnitOfWork(AppDbContext dbContext)
@@ -75,4 +77,18 @@ public class UnitOfWork : IUnitOfWork
        _disposed = true;
     }
 
+    public void BeginTransaction()
+    {
+        _transaction = context.Database.BeginTransaction();
+    }
+
+    public void CommitTransaction()
+    {
+        _transaction?.Commit();
+    }
+
+    public void RollbackTransaction()
+    {
+        _transaction.Rollback();
+    }
 }
