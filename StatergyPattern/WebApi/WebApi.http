@@ -1,0 +1,12 @@
+@WebApi_HostAddress = https://localhost:7240
+
+
+
+GET {{WebApi_HostAddress}}/pay?method=creditcard&amount=100
+
+###
+GET {{WebApi_HostAddress}}/pay?method=paypal&amount=100
+
+### 
+GET {{WebApi_HostAddress}}/pay?method=applepay&amount=100
+
