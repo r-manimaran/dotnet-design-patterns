@@ -1,28 +1,28 @@
-﻿namespace ProductsApi.Decorator;
+﻿using System.Reflection;
 
-public class LoggingDecorator<TService> : Decorator<TService> where TService : class
+namespace ProductsApi.Decorator;
+
+public class LoggingDecorator<T> : DispatchProxy where T : class
 {
-    private readonly ILogger<LoggingDecorator<TService>> _logger;
-    public LoggingDecorator(TService inner, ILogger<LoggingDecorator<TService>> logger) : base(inner)
-    {
+    private T _decorated;
+    private ILogger<T> _logger;
 
-        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+    public static T Create(T decorated, ILogger<T> logger)
+    {
+        object proxy = Create<T, LoggingDecorator<T>>();
+        ((LoggingDecorator<T>)proxy).SetParameters(decorated, logger);
+        return (T)proxy;
     }
-    // Use dynamic dispatch to forward calls to the inner service
-    public TResult Execute<TResult>(Func<TService, TResult> operation)
+    private void SetParameters(T decorated, ILogger<T> logger)
     {
-        try
-        {
-            _logger.LogInformation($"Executing {operation.Method.Name}");
-            var result = operation(Inner);
-            _logger.LogInformation($"Completed {operation.Method.Name}");
-            return result;
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, $"Error executing {operation.Method.Name}");
-            throw;
-
-        }
+        _decorated = decorated;
+        _logger = logger;
+    }
+    protected override object Invoke(MethodInfo targetMethod, object[] args)
+    {
+        _logger.LogInformation("Logger called: Calling method {Method} at {Date}", targetMethod.Name, DateTime.Now);
+        var result = targetMethod.Invoke(_decorated, args);
+        _logger.LogInformation("Logger called: Finished method {Method} at {Date}", targetMethod.Name, DateTime.Now);
+        return result;
     }
 }

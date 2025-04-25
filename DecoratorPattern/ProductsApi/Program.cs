@@ -1,9 +1,9 @@
 using Polly;
 using ProductsApi;
+using ProductsApi.Decorator;
 using ProductsApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 builder.Services.AddControllers();
 
@@ -17,7 +17,15 @@ builder.Services.AddSingleton<IAsyncPolicy>(serviceProvider =>
 
 // builder.Services.AddDecoratorsManually();
 
-builder.Services.AddDecoratorsWithScrutor();
+// builder.Services.AddDecoratorsWithScrutor();
+
+builder.Services.AddScoped<ProductService>();
+
+builder.Services.AddScoped<IProductService>(sp =>
+{
+    var imple = sp.GetRequiredService<ProductService>();
+    return ServiceDecoratorBuilder.Decorate<IProductService>(sp, imple, useLogging: true, useCaching: false, useRetry: true);
+});
 
 builder.Services.AddMemoryCache();
 
