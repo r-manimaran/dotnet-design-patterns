@@ -1,0 +1,6 @@
+@ReadThroughCache_HostAddress = http://localhost:5246
+
+GET {{ReadThroughCache_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

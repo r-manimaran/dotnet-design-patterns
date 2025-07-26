@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadThroughCache", "ReadThroughCache\ReadThroughCache.csproj", "{E94D6F00-BA06-2514-F776-0C6025F47543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadThroughCache-Redis.AppHost", "ReadThroughCache-Redis.AppHost\ReadThroughCache-Redis.AppHost.csproj", "{B848BCFC-837D-465E-9432-D21F6CCABC6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadThroughCache-Redis.ServiceDefaults", "ReadThroughCache-Redis.ServiceDefaults\ReadThroughCache-Redis.ServiceDefaults.csproj", "{CD35BED5-F03E-088F-65CA-2FEF44BF9D5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E94D6F00-BA06-2514-F776-0C6025F47543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E94D6F00-BA06-2514-F776-0C6025F47543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E94D6F00-BA06-2514-F776-0C6025F47543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E94D6F00-BA06-2514-F776-0C6025F47543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B848BCFC-837D-465E-9432-D21F6CCABC6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B848BCFC-837D-465E-9432-D21F6CCABC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B848BCFC-837D-465E-9432-D21F6CCABC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B848BCFC-837D-465E-9432-D21F6CCABC6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD35BED5-F03E-088F-65CA-2FEF44BF9D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD35BED5-F03E-088F-65CA-2FEF44BF9D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD35BED5-F03E-088F-65CA-2FEF44BF9D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD35BED5-F03E-088F-65CA-2FEF44BF9D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42276C65-DDA4-4A59-ADB7-133C81D89594}
+	EndGlobalSection
+EndGlobal
