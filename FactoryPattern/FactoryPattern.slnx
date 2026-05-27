@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="FactoryPatternApproach/FactoryPatternApproach.csproj" />
+  <Project Path="NormalApproachApi/NormalApproachApi.csproj" />
+</Solution>
