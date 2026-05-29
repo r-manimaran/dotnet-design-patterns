@@ -16,6 +16,13 @@ builder.Services.AddSingleton<INotificationFactory, NotificationFactory>();
 // Loggig
 builder.Services.AddLogging();
 
+// Using Keyed Services
+/*
+builder.Services.AddKeyedSingleton<INotificationService, EmailService>("email");
+builder.Services.AddKeyedSingleton<INotificationService, SmsService>("sms");
+builder.Services.AddKeyedSingleton<INotificationService, PushNotificationService>("push");
+builder.Services.AddSingleton<INotificationFactory, KeyedNotificationFactory>();
+*/
 
 var app = builder.Build();
 
